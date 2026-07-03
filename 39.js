@@ -25,3 +25,13 @@ const products = {
 
 let highestPrice = 0;
 let productName = "";
+
+for(let key in products){
+    if(products[key] > highestPrice){
+        highestPrice = products[key];
+        productName = key
+    }
+}
+
+console.log('Most Expensive Product :',productName)
+console.log('Price :',highestPrice)
