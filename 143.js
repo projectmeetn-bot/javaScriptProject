@@ -6,7 +6,7 @@ function getProducts() {
 
         setTimeout(() => {
 
-            const products = require("./product.json");
+            const products = require("./products.json");
 
             resolve(products);
 
