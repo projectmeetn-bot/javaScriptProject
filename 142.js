@@ -5,7 +5,7 @@ console.log("Program Started");
 fs.readFile("products.json", "utf8", (error, data) => {
 
     if (error) {
-        console.log(error.stock);
+        console.log(error.message);
         return;
     }
 
