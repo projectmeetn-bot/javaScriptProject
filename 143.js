@@ -1,18 +1,35 @@
-fetch("https://jsonplaceholder.typicode.com/users")
-    .then((response) => {
-        return response.json();
-    })
-    .then((users) => {
-        console.log("Users List:");
+function getProducts() {
 
-        users.forEach((user) => {
-            console.log("-------------------------");
-            console.log("ID     :", user.id);
-            console.log("Name   :", user.name);
-            console.log("Email  :", user.email);
-            console.log("City   :", user.address.city);
-        });
-    })
-    .catch((error) => {
-        console.log("Error :", error.message);
+    return new Promise((resolve, reject) => {
+
+        console.log("📡 Calling Product API...");
+
+        setTimeout(() => {
+
+            const products = require("product.json");
+
+            resolve(products);
+
+        }, 2000);
+
     });
+
+}
+
+async function displayProducts() {
+
+    try {
+
+        const products = await getProducts();
+
+        console.table(products);
+
+    } catch (error) {
+
+        console.log(error.message);
+
+    }
+
+}
+
+displayProducts();
