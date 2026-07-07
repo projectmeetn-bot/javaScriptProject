@@ -1,9 +1,17 @@
-const fs = require('fs')
+const fs = require("fs");
 
-console.log("Start");
+console.log("Program Started");
 
-const data = fs.readFileSync("product.json", "utf8");
+fs.readFile("products.json", "utf8", (error, data) => {
 
-console.log(data);
+    if (error) {
+        console.log(error.stock);
+        return;
+    }
 
-console.log("End");
+    console.log("File Read Successfully");
+    console.log(data);
+
+});
+
+console.log("Program Finished");
