@@ -18,9 +18,9 @@
         "quantity": 5
     },
     {
-        "id": 12,
-        "name": "meet",
-        "price": 12,
-        "quantity": 12
+        "id": 4,
+        "name": "Router",
+        "price": 1200,
+        "quantity": 50
     }
 ]
